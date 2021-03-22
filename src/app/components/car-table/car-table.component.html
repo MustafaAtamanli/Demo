@@ -1,0 +1,26 @@
+
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Araba Giriniz</label>
+    <input type="email" [(ngModel)]="filterText" class="form-control" id="exampleFormControlInput1" placeholder="Araba Giriniz">
+  </div>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Marka</th>
+        <th scope="col">Renk</th>
+        <th scope="col">Ücret</th>
+        <th scope="col">Açıklama</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let car of cars | carFilter:filterText">
+        <td>{{car.id}}</td>
+        <td>{{car.brandName}}</td>
+        <td>{{car.colorName}}</td>
+        <td>{{car.dailyPrice}}</td>
+        <td>{{car.description}}</td>
+      </tr>
+    </tbody>
+  </table>
