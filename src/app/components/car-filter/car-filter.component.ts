@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Brand } from 'src/app/models/brand';
 import { Color } from 'src/app/models/color';
 import { BrandService } from 'src/app/services/brand.service';
+import { CarService } from 'src/app/services/car.service';
 import { ColorService } from 'src/app/services/color.service';
 
 @Component({
@@ -19,6 +20,7 @@ export class CarFilterComponent implements OnInit {
 
   constructor(private brandService: BrandService,
     private colorService: ColorService,
+    private carService:CarService,
     private activatedRoute: ActivatedRoute,
     private router:Router
     ) { }
@@ -26,6 +28,7 @@ export class CarFilterComponent implements OnInit {
   ngOnInit(): void {
     this.getBrands();
     this.getColors();
+    
    
   }
 
@@ -41,6 +44,9 @@ export class CarFilterComponent implements OnInit {
     this.colorService.getColors().subscribe(response=>this.colors=response.data);
   }
 
- 
+  getCars(){
+    this.carService.getCarDetail();
+  }
+  
 
 }
