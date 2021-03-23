@@ -19,8 +19,10 @@ import { BrandFilterPipe } from './pipes/brand-filter.pipe';
 import { CarFilterPipe } from './pipes/car-filter.pipe';
 import { ColorFilterPipe } from './pipes/color-filter.pipe';
 
+
 import {ToastrModule} from 'ngx-toastr';
 import { CarTableComponent } from './components/car-table/car-table.component';
+import { CarFilterComponent } from './components/car-filter/car-filter.component';
 
 
 
@@ -38,6 +40,7 @@ import { CarTableComponent } from './components/car-table/car-table.component';
     CarFilterPipe,
     ColorFilterPipe,
     CarTableComponent,
+    CarFilterComponent
     
     
     

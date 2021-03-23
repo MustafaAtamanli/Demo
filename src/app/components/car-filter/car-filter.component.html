@@ -1,0 +1,23 @@
+<h5>Marka Filtreleme</h5>
+<select class="form-select" aria-label="Default select example" [(ngModel)]>
+
+    <option>Tüm Markalar</option>
+    <option *ngFor="let brand of brands">
+        {{brand.brandName}}</option>
+
+</select>
+
+
+<h5>Renk Filtreleme</h5>
+<select class="form-select" aria-label="Default select example">
+
+    <option>Tüm Renkler</option>
+    <option *ngFor="let color of colors">
+        {{color.colorName}}</option>
+
+</select>
+
+<br> <br>
+<button class="btn btn-warning">
+    Filtrele
+</button>
