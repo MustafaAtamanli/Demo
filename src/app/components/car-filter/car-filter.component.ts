@@ -14,8 +14,8 @@ export class CarFilterComponent implements OnInit {
 
   brands:Brand[];
   colors:Color[];
-  activeBrandName:number;
-  activeColorName:number;
+  selectedBrand:number;
+  selectedColor:number;
 
   constructor(private brandService: BrandService,
     private colorService: ColorService,
@@ -26,15 +26,10 @@ export class CarFilterComponent implements OnInit {
   ngOnInit(): void {
     this.getBrands();
     this.getColors();
-    this.getActivesFromParams();
+   
   }
 
-  getActivesFromParams() {
-    this.activatedRoute.queryParams.subscribe((params) => {
-      if (params['brand']) this.activeBrandName = params['brand'];
-      if (params['color']) this.activeColorName = params['color'];
-    });
-  }
+  
 
   getBrands() {
     this.brandService
