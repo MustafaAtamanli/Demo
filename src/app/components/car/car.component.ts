@@ -10,10 +10,12 @@ import { CarService } from 'src/app/services/car.service';
 })
 export class CarComponent implements OnInit {
 
+  status:boolean;
   cars:Car[];
   dataLoaded=false;
   image="noImage.jpg";
   filterText="";
+  
 
   constructor(private carService:CarService,private activatedRoute:ActivatedRoute) { }
 
@@ -35,9 +37,14 @@ export class CarComponent implements OnInit {
   }
 
   getCarDetail(){
+    
     this.carService.getCarDetail().subscribe(response=>{
+      
       this.cars=response.data;
       this.dataLoaded=true;
+      
+      
+      
     });
   }
 

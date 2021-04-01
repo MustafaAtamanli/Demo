@@ -1,8 +1,8 @@
 <h5>Marka Filtreleme</h5>
-<select class="form-select" aria-label="Default select example" [(ngModel)]="selectedBrand" >
+<select class="form-select" aria-label="Default select example" [(ngModel)]="selectedBrand"  >
 
     <option value="undefined">Tüm Markalar</option>
-    <option *ngFor="let brand of brands" value="{{brand.brandId}}" >
+    <option *ngFor="let brand of brands"  value="{{brand.brandId}}" >
         {{brand.brandName}}</option>
 
 </select>

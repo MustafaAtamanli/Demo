@@ -1,0 +1,51 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#car-add">
+  Araba Ekle
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="car-add" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Araba Ekle</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="carAddForm">
+          <div class="mb-3">
+            <label>Marka Seç</label>
+            <select class="form-select" aria-label="Default select example" formControlName="brandId">
+              <option *ngFor="let brand of brands" value="{{brand.brandId}}" >{{brand.brandName}}</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label>Renk Seç</label>
+            <select class="form-select" aria-label="Default select example" formControlName="colorId">
+              <option *ngFor="let color of colors" value="{{color.colorId}}" >{{color.colorName}}</option>
+            </select>
+
+          </div>
+          <div class="mb-3">
+            <label>Model Yılı</label>
+            <input type="number" class="form-control" formControlName="modelYear">
+          </div>
+          <div class="mb-3">
+            <label>Günlük Ücret</label>
+            <input type="number" class="form-control" formControlName="dailyPrice">
+          </div>
+
+          <div class="mb-3">
+            <label>Açıklama</label>
+            <input type="text" class="form-control" formControlName="description">
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="add()">Ekle</button>
+      </div>
+    </div>
+  </div>
+</div>

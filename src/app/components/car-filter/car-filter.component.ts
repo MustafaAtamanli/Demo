@@ -29,7 +29,6 @@ export class CarFilterComponent implements OnInit {
     this.getBrands();
     this.getColors();
     
-   
   }
 
   
@@ -44,9 +43,6 @@ export class CarFilterComponent implements OnInit {
     this.colorService.getColors().subscribe(response=>this.colors=response.data);
   }
 
-  getCars(){
-    this.carService.getCarDetail();
-  }
-  
+
 
 }

@@ -6,5 +6,6 @@ export interface Car{
     colorName:string,
     modelYear:number,
     dailyPrice:number,
-    description:string
+    description:string,
+    status:boolean
 }

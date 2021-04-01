@@ -7,7 +7,7 @@
 <div *ngIf="dataLoaded==true" class="row">
   <div  *ngFor="let car of cars" class="card" style="width: 18rem;">
     <img src="http://arabahabercisi.com/wp-content/uploads/2019/01/En-%C3%87ok-Sat%C4%B1lan-Araba-Rengi-2018.jpg" class="card-img-top" alt="Hata">
-    <div class="card-body">
+    <div  class="card-body">
       <h5 class="card-title">{{car.brandName}}</h5>
       <p class="card-text">{{car.description}}</p>
       <button  routerLink="cars/car-detail/{{car.id}}" type="button" class="btn btn-primary">Detaylar</button>

@@ -7,20 +7,23 @@
 <table class="table">
     <thead>
       <tr>
-        <th scope="col">#</th>
+        
         <th scope="col">Marka</th>
         <th scope="col">Renk</th>
         <th scope="col">Ücret</th>
         <th scope="col">Açıklama</th>
+        <th scope="col">İşlemler</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let car of cars | carFilter:filterText">
-        <td>{{car.id}}</td>
+        
         <td>{{car.brandName}}</td>
         <td>{{car.colorName}}</td>
         <td>{{car.dailyPrice}}</td>
         <td>{{car.description}}</td>
+        <td><button class="btn btn-success">Güncelle</button></td>
       </tr>
     </tbody>
   </table>
+  <app-car-add></app-car-add>
