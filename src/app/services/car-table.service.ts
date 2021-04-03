@@ -13,8 +13,8 @@ export class CarTableService {
 
   constructor(private httpClient:HttpClient) {}
 
-  getCarDetail():Observable<ListResponseModel<Car>> {
+ /*  getCarDetail():Observable<ListResponseModel<Car>> {
     let newPath=this.apiUrl+"cars/getcarsdetails";
     return this.httpClient.get<ListResponseModel<Car>>(newPath);
-  }
+  } */
 }

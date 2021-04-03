@@ -26,6 +26,13 @@ import { CarFilterComponent } from './components/car-filter/car-filter.component
 import { PaymentComponent } from './components/payment/payment.component';
 import { MainComponent } from './components/main/main.component';
 import { CarAddComponent } from './components/car-add/car-add.component';
+import { BrandAddComponent } from './components/brand-add/brand-add.component';
+import { BrandTableComponent } from './components/brand-table/brand-table.component';
+import { ColorTableComponent } from './components/color-table/color-table.component';
+import { ColorAddComponent } from './components/color-add/color-add.component';
+import { BrandUpdateComponent } from './components/brand-update/brand-update.component';
+import { CarUpdateComponent } from './components/car-update/car-update.component';
+import { ColorUpdateComponent } from './components/color-update/color-update.component';
 
 
 
@@ -46,7 +53,14 @@ import { CarAddComponent } from './components/car-add/car-add.component';
     CarFilterComponent,
     PaymentComponent,
     MainComponent,
-    CarAddComponent
+    CarAddComponent,
+    BrandAddComponent,
+    BrandTableComponent,
+    ColorTableComponent,
+    ColorAddComponent,
+    BrandUpdateComponent,
+    CarUpdateComponent,
+    ColorUpdateComponent
     
     
     

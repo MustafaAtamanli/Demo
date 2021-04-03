@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Car } from 'src/app/models/car';
 import { CarTableService } from 'src/app/services/car-table.service';
+import { CarService } from 'src/app/services/car.service';
 
 @Component({
   selector: 'app-car-table',
@@ -13,14 +14,14 @@ export class CarTableComponent implements OnInit {
   cars:Car[];
   filterText="";
 
-  constructor(private carTable:CarTableService) { }
+  constructor(private carService:CarService) { }
 
   ngOnInit(): void {
     this.getCarDetail();
   }
 
   getCarDetail(){
-    this.carTable.getCarDetail().subscribe(response=>{
+    this.carService.getCarDetail().subscribe(response=>{
       this.cars=response.data;
       
     });
