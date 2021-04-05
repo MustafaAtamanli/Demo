@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -24,7 +24,7 @@ import {ToastrModule} from 'ngx-toastr';
 import { CarTableComponent } from './components/car-table/car-table.component';
 import { CarFilterComponent } from './components/car-filter/car-filter.component';
 import { PaymentComponent } from './components/payment/payment.component';
-import { MainComponent } from './components/main/main.component';
+/* import { MainComponent } from './components/main/main.component'; */
 import { CarAddComponent } from './components/car-add/car-add.component';
 import { BrandAddComponent } from './components/brand-add/brand-add.component';
 import { BrandTableComponent } from './components/brand-table/brand-table.component';
@@ -33,6 +33,8 @@ import { ColorAddComponent } from './components/color-add/color-add.component';
 import { BrandUpdateComponent } from './components/brand-update/brand-update.component';
 import { CarUpdateComponent } from './components/car-update/car-update.component';
 import { ColorUpdateComponent } from './components/color-update/color-update.component';
+import { LoginComponent } from './components/login/login.component';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
 
 
 
@@ -52,7 +54,6 @@ import { ColorUpdateComponent } from './components/color-update/color-update.com
     CarTableComponent,
     CarFilterComponent,
     PaymentComponent,
-    MainComponent,
     CarAddComponent,
     BrandAddComponent,
     BrandTableComponent,
@@ -60,7 +61,8 @@ import { ColorUpdateComponent } from './components/color-update/color-update.com
     ColorAddComponent,
     BrandUpdateComponent,
     CarUpdateComponent,
-    ColorUpdateComponent
+    ColorUpdateComponent,
+    LoginComponent
     
     
     
@@ -78,7 +80,9 @@ import { ColorUpdateComponent } from './components/color-update/color-update.com
     
     
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true}
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

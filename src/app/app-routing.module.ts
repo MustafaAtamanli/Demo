@@ -7,9 +7,10 @@ import { CarDetailComponent } from './components/car-detail/car-detail.component
 import { CarTableComponent } from './components/car-table/car-table.component';
 import { CarComponent } from './components/car/car.component';
 import { ColorTableComponent } from './components/color-table/color-table.component';
-import { MainComponent } from './components/main/main.component';
+import { LoginComponent } from './components/login/login.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { RentalComponent } from './components/rental/rental.component';
+import { LoginGuard } from './guards/login.guard';
 
 const routes: Routes = [
   {path:"",pathMatch:"full",component:CarComponent},
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path:"carList",component:CarTableComponent},
   {path:"filter/:brandId/:colorId",component:CarComponent},
   {path:"brandList",component:BrandTableComponent},
-  {path:"colorList",component:ColorTableComponent}
+  {path:"colorList",component:ColorTableComponent},
+  {path:"login",component:LoginComponent}
   
   
   
