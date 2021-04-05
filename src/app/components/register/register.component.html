@@ -13,10 +13,23 @@
                 <div class="login-wrap p-4 p-md-5">
                     <div class="d-flex">
                         <div class="w-100">
-                            <h3 class="mb-4">Giris Yap</h3>
+                            <h3 class="mb-4">Kayıt Ol</h3>
                         </div>
                     </div>
-                    <form class="login-form" [formGroup]="loginForm">
+                    <form class="login-form" [formGroup]="registerForm" >
+
+                        <div class="form-group">
+                            <div class="icon d-flex align-items-center justify-content-center"><span
+                                    class="fa fa-address-card-o"></span></div>
+                            <input type="text" class="form-control rounded-left" placeholder="Adınız" formControlName="firstName">
+                        </div>
+
+                        <div class="form-group">
+                            <div class="icon d-flex align-items-center justify-content-center"><span
+                                    class="fa fa-address-card-o"></span></div>
+                            <input type="text" class="form-control rounded-left" placeholder="Soyadınız" formControlName="lastName">
+                        </div>
+
                         <div class="form-group">
                             <div class="icon d-flex align-items-center justify-content-center"><span
                                     class="fa fa-user"></span></div>
@@ -30,7 +43,7 @@
                         <div class="form-group d-flex align-items-center">
 
                             <div class="w-100 d-flex justify-content-end">
-                                <button type="submit" class="btn btn-primary rounded submit" (click)="login()">Giriş Yap</button>
+                                <button type="submit" class="btn btn-primary rounded submit" (click)="register()" >Kayıt Ol</button>
                             </div>
                         </div>
                     </form>

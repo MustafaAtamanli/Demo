@@ -9,6 +9,7 @@ import { CarComponent } from './components/car/car.component';
 import { ColorTableComponent } from './components/color-table/color-table.component';
 import { LoginComponent } from './components/login/login.component';
 import { PaymentComponent } from './components/payment/payment.component';
+import { RegisterComponent } from './components/register/register.component';
 import { RentalComponent } from './components/rental/rental.component';
 import { LoginGuard } from './guards/login.guard';
 
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path:"filter/:brandId/:colorId",component:CarComponent},
   {path:"brandList",component:BrandTableComponent},
   {path:"colorList",component:ColorTableComponent},
-  {path:"login",component:LoginComponent}
+  {path:"login",component:LoginComponent}, 
+  {path:"register",component:RegisterComponent} 
   
   
   

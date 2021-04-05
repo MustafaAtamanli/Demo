@@ -35,6 +35,7 @@ import { CarUpdateComponent } from './components/car-update/car-update.component
 import { ColorUpdateComponent } from './components/color-update/color-update.component';
 import { LoginComponent } from './components/login/login.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { RegisterComponent } from './components/register/register.component';
 
 
 
@@ -62,7 +63,8 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     BrandUpdateComponent,
     CarUpdateComponent,
     ColorUpdateComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
     
     
     
