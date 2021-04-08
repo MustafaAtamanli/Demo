@@ -11,6 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { RegisterComponent } from './components/register/register.component';
 import { RentalComponent } from './components/rental/rental.component';
+import { UserDetailComponent } from './components/user-detail/user-detail.component';
 import { LoginGuard } from './guards/login.guard';
 
 const routes: Routes = [
@@ -24,7 +25,8 @@ const routes: Routes = [
   {path:"brandList",component:BrandTableComponent},
   {path:"colorList",component:ColorTableComponent},
   {path:"login",component:LoginComponent}, 
-  {path:"register",component:RegisterComponent} 
+  {path:"register",component:RegisterComponent},
+  {path:"profile",component:UserDetailComponent,canActivate:[LoginGuard]} 
   
   
  

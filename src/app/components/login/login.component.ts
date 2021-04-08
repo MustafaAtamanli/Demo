@@ -40,6 +40,8 @@ export class LoginComponent implements OnInit {
           
           this.localStorageService.add('token', response.data.token);
           
+          window.location.reload();
+          this.router.navigate(["profile"])
       },responseError=>{
         this.toastrService.error("Hatalı Bilgi Girişi","HATA!")
       })

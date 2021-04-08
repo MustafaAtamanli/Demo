@@ -59,7 +59,7 @@
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
-            style="background-color:#ECECEC; border-radius: 10px; color: white;"
+            style="background-color:lightblue; border-radius: 10px; color: white;"
           >
           
             {{ user.firstName }}
@@ -73,7 +73,7 @@
           >
 
             <li class="colorl">
-              <a class="dropdown-item">Profil</a>
+              <a class="dropdown-item" routerLink="profile">Profil</a>
             </li>
             <li><hr class="dropdown-divider" /></li>
             <li><a class="dropdown-item" (click)="logOut()">Çıkış Yap</a></li>

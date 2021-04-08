@@ -6,7 +6,7 @@ export interface User {
   firstName: string;
   lastName: string;
   email: string;
-  passwordHash: string;
-  passwordSalt: string;
+  password: string;
+  /* passwordSalt: string; */
   status: boolean;
 }
