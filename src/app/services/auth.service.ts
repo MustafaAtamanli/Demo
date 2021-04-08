@@ -6,6 +6,7 @@ import { RegisterModel } from '../models/registerModel';
 import { ResponseModel } from '../models/responseModel';
 import { SingleResponseModel } from '../models/singleResponseModel';
 import { TokenModel } from '../models/tokenModel';
+import { UserDetail } from '../models/userDetail';
 
 @Injectable({
   providedIn: 'root'
@@ -24,11 +25,18 @@ export class AuthService {
     return this.httpClient.post(this.apiUrl+"register",registerModel)
   }
 
-  isAuthenticated(){
-    if(localStorage.getItem("token")){
+  
+  changePassword(userDetail: UserDetail): Observable<ResponseModel> {
+    return this.httpClient.post<ResponseModel>(
+      this.apiUrl + 'changepassword',
+      userDetail
+    );
+  }
+  
+  isAuthehticated() {
+    if (localStorage.getItem('token')) {
       return true;
-    }
-    else{
+    } else {
       return false;
     }
   }
