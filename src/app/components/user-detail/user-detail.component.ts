@@ -25,26 +25,31 @@ export class UserDetailComponent implements OnInit {
 
   constructor(private formBuilder:FormBuilder,
     private userService:UserService,
-    private toastrService:ToastrService) { }
+    private toastrService:ToastrService,private localStorageService:LocalStorageService) { }
 
   ngOnInit(): void {
     
     this.createUserFrom();
     this.getUserByEmail();
+    
+    
   }
 
   getUserByEmail(){
-    let email = localStorage.getItem("email")
+    let email = this.localStorageService.get("email")
     this.userService.getByMail(email).subscribe(response=>{
       this.user=response.data;
-      for (let index = 0; index < this.user.length; index++) {
-        const data = this.user[index];
+      for (let i = 0; i < this.user.length; i++) {
+        let data = this.user[i];
         
         this.firstName=data.firstName;
         this.lastName=data.lastName;
         this.email=data.email;
+        
       }
+      
     })
+    
   }
 
   createUserFrom(){
@@ -64,6 +69,7 @@ export class UserDetailComponent implements OnInit {
       this.userService.update(userModel).subscribe(response=>{
         this.toastrService.success("Bilgileriniz Başarıyla Güncellendi")
       },responseError=>{
+        this.toastrService.error("Hata!","Daha Sonra Tekrar Deneyiniz")
         console.log(responseError.error)
       })
     }

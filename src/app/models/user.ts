@@ -7,6 +7,6 @@ export interface User {
   lastName: string;
   email: string;
   password: string;
-  /* passwordSalt: string; */
+  findexScore:number;
   status: boolean;
 }

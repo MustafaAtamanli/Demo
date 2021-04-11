@@ -24,7 +24,7 @@ export class CarComponent implements OnInit {
       if(params["brandId"] && params["colorId"]){
         this.getCarsByBrandAndColor(params["brandId"],params["colorId"])
       }
-      else if(params["brandId"]){
+      else if(params["brandId"] && params["colorId"]){
         this.getCarsByBrand(params["brandId"])
       }
       

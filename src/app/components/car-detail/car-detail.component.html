@@ -14,6 +14,11 @@
     <li class="list-group-item">Model Yılı : {{car.modelYear}}</li>
     <li class="list-group-item">Günlük Ücreti : {{car.dailyPrice}} TL</li>
     <li class="list-group-item">Açıklaması : {{car.description}}</li>
-    <li class="list-group-item" *ngIf="car.status == true"><app-rental [car]="car"></app-rental></li>
-    <li class="list-group-item" *ngIf="car.status == false"><strong>Bu Araç Şu Anda Kiralanamaz!</strong> </li>
-  </ul>
+    <li class="list-group-item">Findex Puan : {{car.findexScore}}</li>
+    
+    
+
+    <li class="list-group-item" *ngIf="car.status == true "><app-rental [car]="car" (click)="getUser()"></app-rental></li>
+    <li class="list-group-item" *ngIf="car.status == false "><strong>Bu Araç Şu Anda Kiralanamaz!</strong> </li>
+   
+  </ul> 

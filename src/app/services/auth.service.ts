@@ -8,6 +8,8 @@ import { SingleResponseModel } from '../models/singleResponseModel';
 import { TokenModel } from '../models/tokenModel';
 import { UserDetail } from '../models/userDetail';
 
+
+
 @Injectable({
   providedIn: 'root'
 })

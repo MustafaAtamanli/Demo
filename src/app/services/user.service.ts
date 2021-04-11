@@ -10,9 +10,8 @@ import { User } from '../models/user';
   providedIn: 'root'
 })
 export class UserService {
-  getUserByMail(arg0: string) {
-    throw new Error('Method not implemented.');
-  }
+
+  
 
   apiUrl = 'https://localhost:44399/api/';
 
